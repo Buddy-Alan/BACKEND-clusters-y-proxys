@@ -1,0 +1,31 @@
+{
+  "name": "prueba-cluster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "forever-cluster": "forever start server.js --modo cluster",
+    "forever-fork": "forever start server.js",
+    "node-cluster": "node server.js --port 8081 --modo cluster",
+    "node-fork": "node server.js --port 8081",
+    "babel": "babel ./server.js -o ./index.js",
+    "pm2-fork": "pm2 start server.js",
+    "pm2-cluster": "pm2 start -i 0 server.js",
+    "nginx-node-cluster": "node server.js --port 8081 --modo cluster",
+    "nginx-node-fork": "node server.js --port 8080 "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "minimist": "^1.2.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
